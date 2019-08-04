@@ -1,0 +1,15 @@
+{
+  "name": "max-independent-set",
+  "version": "1.0.0",
+  "description": "implementation for a5q2",
+  "main": "maximum-indepenent-set.js",
+  "scripts": {
+    "test": "mocha"
+  },
+  "author": "Kevin Lee",
+  "license": "MIT",
+  "dependencies": {},
+  "devDependencies": {
+    "mocha": "^6.2.0"
+  }
+}
