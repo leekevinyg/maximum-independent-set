@@ -4,9 +4,7 @@
 
 */
 
-const PATH = [1, 9, 3, 2, 8];
-
-// Recursively find max 
+// Recursive solution
 const FindMaxISHelper = (P) => {
     if (P.length === 0) {
         return 0;
