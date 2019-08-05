@@ -10,5 +10,6 @@ describe('FindMaxIS', function() {
     });
     it('should return the maximum weight of an indepdent set possible in the path', function() {
       assert.equal(FindMaxIS([1, 9, 3, 2, 8]), 17);
+      assert.equal(FindMaxIS([1, 5, 6, 3]), 8);
     });
 });
