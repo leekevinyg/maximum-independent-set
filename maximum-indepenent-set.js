@@ -1,10 +1,9 @@
 /*
-
-    Given a weighted graph path the functions below will find the maximum independent set
-
+    Given a weighted graph path in the form of: [1, 9, 12, 5, 16], the functions below will 
+    find the maximum independent set
 */
 
-// Recursive solution
+// Recursively find max 
 const FindMaxISHelper = (P) => {
     if (P.length === 0) {
         return 0;
@@ -21,23 +20,27 @@ const FindMaxISHelper = (P) => {
 
 // Dynamic programming solution
 const FindMaxIS = (P) => {
-    let SOLN = [];
+    let Soln = [];
 
     if (P.length === 0) {
-        SOLN[0] = 0;
+        return 0;
     }
 
     if (P.length === 1) {
-        SOLN[1] = P[0];
+        return P[0];
     }
 
-    if (P.length > 2) {
-        for (let k=2; k < P.length + 1; k++) {
-            SOLN[k] = FindMaxISHelper(P.slice(0, k));
+    Soln[0] = P[0];
+    if (P.length > 1) {
+        Soln[1] = Math.max(P[0], P[1]);
+        for (let k=2; k < P.length; k++) {
+            Soln[k] = Math.max(
+                Soln[k-1],
+                Soln[k - 2] + P[k],
+            )
         }
     }
-
-    return SOLN[P.length];
+    return Soln[P.length - 1];
 }
 
 module.exports = {
