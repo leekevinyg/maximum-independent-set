@@ -1,6 +1,6 @@
 /*
     Given a weighted graph path in the form of: [1, 9, 12, 5, 16], the functions below will 
-    find the maximum independent set
+    find the weight of the maximum independent set
 */
 
 // Recursively find max 
